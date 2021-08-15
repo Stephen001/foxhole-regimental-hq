@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "foxhole-regimental-hq"
+version = "0.1.0"
+description = "A website for helping people manage regiments in Foxhole."
+authors = ["Stephen Badger <stephen.badger@gmail.com>"]
+license = "GPL-3"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+opencv-python-headless = "^4.5.3"
+numpy = "^1.21.1"
+pytesseract = "^0.3.8"
+
+[tool.poetry.dev-dependencies]
+pycodestyle = "^2.7.0"
+pylint = "^2.9.6"
+
+[tool.poetry.scripts]
+scan = "foxhole_regimental_hq.stockpile.scan:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
