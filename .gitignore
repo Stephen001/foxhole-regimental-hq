@@ -3,3 +3,7 @@ target/
 .settings/
 .vscode/
 .classpath
+node/
+node_modules/
+yarn-error.log
+src/main/resources/static/built/
