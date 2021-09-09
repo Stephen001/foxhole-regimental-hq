@@ -1,8 +1,10 @@
-package org.awesomeware.foxhole.model;
+package org.awesomeware.foxhole.util;
 
 import java.util.stream.Stream;
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
+
+import org.awesomeware.foxhole.model.Faction;
 
 @Converter(autoApply = true)
 public class FactionConvertor implements AttributeConverter<Faction, String> {

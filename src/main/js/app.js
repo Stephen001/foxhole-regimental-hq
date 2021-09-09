@@ -6,16 +6,22 @@ class App extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {regiments: []};
+		this.state = {regiments: [], item_types: [], items: []};
 	}
 
 	componentDidMount() {
 		client({method: 'GET', path: '/api/regiments'}).done(response => {
 			this.setState({regiments: response.entity._embedded.regiments});
 		});
+		client({method: 'GET', path: '/api/itemTypes'}).done(response => {
+			this.setState({item_types: response.entity._embedded.item_types});
+		});
+		client({method: 'GET', path: '/api/items'}).done(response => {
+			this.setState({items: response.entity._embedded.items});
+		});
 	}
 
-	render() { (3)
+	render() {
 		return (
 			<RegimentList regiments={this.state.regiments}/>
 		)
